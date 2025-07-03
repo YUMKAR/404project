@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2D 이동 게임</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div id="overlay" class="hidden"></div>
+
+  <div id="game-area">
+    <div id="character"></div>
+
+    <!-- 🔵 문 1 -->
+    <div class="door" style="left: 100px; top: 300px;" data-link="index1.html"></div> <!-- 기준 -->
+    <!-- 🔵 문 2 -->
+    <div class="door" style="left: 810.5px; top: 300px;" data-link="index2.html"></div> <!-- 오른쪽 -->
+    <!-- 🔵 문 3 -->
+    <div class="door" style="left: 1565px; top: 300px;" data-link="index3.html"></div> <!-- 더 오른쪽 -->
+
+    <!-- 표지판 1 -->
+    <div class="sign" style="left: 260px; top: 380px;" data-content="구글 공룡 게임 조작법 및 공략입니다."></div>
+    <!-- 표지판 2 -->
+    <div class="sign" style="left: 990px; top: 380px;" data-content="화살 피하기 게임 조작법 및 공략입니다."></div>
+    <!-- 표지판 3 -->
+    <div class="sign" style="left: 1745px; top: 380px;" data-content="추가 정보 또는 공략을 넣어주세요."></div>
+
+    <!-- 벽 (맨 위에 배치) -->
+    <div class="wall"></div>
+
+    <!-- 컨트롤러 -->
+    <div id="controller">
+        <div id="arrow-buttons">
+          <button id="up">↑</button>
+          <div>
+            <button id="left">←</button>
+            <button id="down">↓</button>
+            <button id="right">→</button>
+          </div>
+        </div>
+        <button id="f-key">F</button>
+    </div>
+
+    <!-- 팝업창 -->
+    <div id="popup" class="popup hidden">
+      <div id="popup-content">팝업 내용</div>
+      <button id="close-popup">닫기</button>
+    </div>
+    <!-- 🔽 문 근처 안내 메시지 -->
+    <div id="message" class="hidden">F 키를 눌러 입장하기</div>
+    <!-- 표지판 메시지 -->
+    <div id="sign-message" class="hidden">F 키를 눌러 확인하기</div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
